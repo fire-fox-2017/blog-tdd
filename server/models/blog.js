@@ -7,6 +7,10 @@ let blogSchema = new Schema({
         required: true,
         minLength: 6
     },
+    title: {
+        type: String,
+        required: true
+    },
     email: {
         type: String,
         required: true
@@ -17,7 +21,8 @@ let blogSchema = new Schema({
     },
     content: {
         type: String,
-        required: true
+        required: true,
+        maxLength: 500
     },
     created: {
         type: Date,
