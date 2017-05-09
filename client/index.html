@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>Blog</title>
+    <link href="css/style.css" rel="stylesheet">
+    <!-- Vue js -->
+    <script src="https://unpkg.com/vue"></script>
+
+    <!-- Axios -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.16.1/axios.min.js"></script>
+
+    <!-- <script type="text/x-template" id="sidebar-component">
+      <div id="sidebar-wrapper">
+          <ul class="sidebar-nav nav">
+              <li>
+                  <a href="#anch1" data-scroll>
+                      <list-of-blog v-for="blog in blogs" :title="blog.title" :select="detailBlog(blog)"></list-of-blog>
+                  </a>
+              </li>
+          </ul>
+      </div>
+    </script> -->
+
+</head>
+
+<body>
+    <div id="app">
+        <!-- <div id="wrapper"> -->
+
+        <!-- Sidebar -->
+        <div id="sidebar-wrapper">
+            <ul class="sidebar-nav nav">
+                <list-of-blog v-bind:datablog="blogs" v-on:select="detailBlog"></list-of-blog>
+            </ul>
+        </div>
+
+
+        <!-- Page content -->
+        <detail-of-blog v-bind:detail="content"></detail-of-blog>
+        <!-- <blog-list :data="blogs"></blog-list> -->
+
+    </div>
+
+    <!-- jQuery -->
+    <script src="js/app.js"></script>
+
+
+</body>
+
+</html>
